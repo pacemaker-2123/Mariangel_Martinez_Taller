@@ -3,16 +3,16 @@ package entities;
 public class Reservations {
     private String codeReservation;
     private long idR;
-    private String codeR;
+    private String codeFlight;
     private int seats;
     private String dateR;
     private double priceR;
     private int stateR;
 
-    public Reservations(String codeReservation, long idR, String codeR, int seats, String dateR, double priceR, int stateR) {
+    public Reservations(String codeReservation, long idR, String codeFlight, int seats, String dateR, double priceR, int stateR) {
         this.codeReservation = codeReservation;
         this.idR = idR;
-        this.codeR = codeR;
+        this.codeFlight = codeFlight;
         this.seats = seats;
         this.dateR = dateR;
         this.priceR = priceR;
@@ -35,12 +35,12 @@ public class Reservations {
         this.idR = idR;
     }
 
-    public String getCodeR() {
-        return codeR;
+    public String getCodeFlight() {
+        return codeFlight;
     }
 
-    public void setCodeR(String codeR) {
-        this.codeR = codeR;
+    public void setCodeFlight(String codeFlight) {
+        this.codeFlight = codeFlight;
     }
 
     public int getSeats() {
@@ -80,7 +80,7 @@ public class Reservations {
         return "Reservations{" +
                 "codeReservation='" + codeReservation + '\'' +
                 ", idR=" + idR +
-                ", codeR='" + codeR + '\'' +
+                ", codeR='" + codeFlight + '\'' +
                 ", seats=" + seats +
                 ", dateR='" + dateR + '\'' +
                 ", priceR=" + priceR +
