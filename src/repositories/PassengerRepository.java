@@ -10,7 +10,11 @@ public class PassengerRepository {
         listP.add(p);
     }
 
-    public void listAll(){
+    public ArrayList<Passenger> listAll(){
+        return listP;
+    }
+
+    public void printAllP(){
         listP.forEach(System.out::println);
     }
 
@@ -30,6 +34,10 @@ public class PassengerRepository {
             }
         }
         return null;
+    }
+
+    public int totalPassenger(){
+        return listP.size();
     }
 
     public boolean delete(long id){
