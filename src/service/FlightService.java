@@ -1,6 +1,5 @@
 package service;
 import entities.Flight;
-import entities.National;
 import entities.International;
 import repositories.FlightRepository;
 
@@ -24,8 +23,8 @@ public class FlightService {
         fR.saveF(fligth);
     }
 
-    public Flight finByCode(String code) throws Exception{
-        Flight f = fR.findBycode(code);
+    public Flight findByCode(String codeReservation) throws Exception{
+        Flight f = fR.findBycode(codeReservation);
         if (f == null) {
            throw new Exception("NO SE ENCONTRO EL REGISTRO DEL VUELO");
         }
@@ -41,5 +40,13 @@ public class FlightService {
             return i.getPrice() + i.getCharge();
         }
         return flights.getPrice();
+    }
+
+    public Flight getByCode(String code) throws Exception{
+        Flight f = fR.findBycode(code);
+        if (f==null){
+            throw new Exception("NO SE ENCONTRO EL VUELO");
+        }
+        return f;
     }
 }

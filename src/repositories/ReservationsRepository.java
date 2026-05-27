@@ -4,7 +4,7 @@ import entities.Reservations;
 
 import java.util.ArrayList;
 
-public class ReservationRepository {
+public class ReservationsRepository {
     private ArrayList<Reservations> listR = new ArrayList<>();
 
     public void saveR(Reservations r){
