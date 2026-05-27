@@ -2,9 +2,9 @@ package entities;
 
 public class National extends Flight {
     private float duration;
-    private boolean alimentation;
+    private String alimentation;
 
-    public National(String code, String originCity, String destinationCity, String date, String timeOut, String timeArrival, int size, int seatVacant, double price, int stateFlight, float duration, boolean alimentation) {
+    public National(String code, String originCity, String destinationCity, String date, String timeOut, String timeArrival, int size, int seatVacant, double price, int stateFlight, float duration, String alimentation) {
         super(code, originCity, destinationCity, date, timeOut, timeArrival, size, seatVacant, price, stateFlight);
         this.duration = duration;
         this.alimentation = alimentation;
@@ -18,11 +18,11 @@ public class National extends Flight {
         this.duration = duration;
     }
 
-    public boolean getAlimentation() {
+    public String getAlimentation() {
         return alimentation;
     }
 
-    public void setAlimentation(boolean alimentation) {
+    public void setAlimentation(String alimentation) {
         this.alimentation = alimentation;
     }
 

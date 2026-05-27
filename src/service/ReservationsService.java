@@ -7,9 +7,13 @@ import java.util.ArrayList;
 
 public class ReservationsService {
     private ReservationsRepository rR = new ReservationsRepository();
-    private PassengerService pS = new PassengerService();
-    private FlightService fS = new FlightService();
+    private PassengerService pS;
+    private FlightService fS;
 
+    public ReservationsService(PassengerService pS, FlightService fS) {
+        this.pS = pS;
+        this.fS = fS;
+    }
 
     public void SaveReservation(Reservations reservations) throws Exception {
         if (rR.findBycodeR(reservations.getCodeReservation()) != null){
