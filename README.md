@@ -1,0 +1,1 @@
+Implementa arquitectura en capas (entities, repositories, service) con conceptos de herencia, polimorfismo, encapsulamiento y manejo de excepciones, permitiendo gestionar pasajeros, vuelos nacionales e internacionales y reservaciones desde una aplicación de consola.
